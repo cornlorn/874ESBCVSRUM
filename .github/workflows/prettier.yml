@@ -12,7 +12,7 @@ jobs:
             - uses: actions/checkout@v4
             - uses: actions/setup-node@v4
             - run: npm ci
-            - run: npm prettier . --write
+            - run: npx prettier . --write
             - uses: autofix-ci/action@v1
               with:
                   commit-message: 'Apply Prettier format'
