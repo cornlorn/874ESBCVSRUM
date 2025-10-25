@@ -8,8 +8,7 @@ const port = process.env.PORT || 3000;
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-try {
-    await database();
+try {await database();
 
     app.listen(port, () => {
         console.log(`El servidor se está ejecutando en: http://localhost:${port}`);
